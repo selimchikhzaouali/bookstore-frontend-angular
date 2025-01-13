@@ -1,0 +1,16 @@
+<div class="book-list">
+    <mat-card *ngFor="let book of books" class="book-card">
+        <img mat-card-image [src]="book.image" alt="Book Image" />
+        <mat-card-header>
+            <mat-card-title>{{ book.title }}</mat-card-title>
+            <mat-card-subtitle>Author: {{ book.author.name }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p><strong>Category:</strong> {{ book.category.name }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-stroked-button color="primary">View</button>
+            <button mat-stroked-button color="warn">Delete</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
